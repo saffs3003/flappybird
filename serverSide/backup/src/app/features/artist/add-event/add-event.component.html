@@ -1,0 +1,26 @@
+<section>
+  <mat-dialog-content class="mat-typography">
+    <div class="modalHeader">
+      <h3>Add New Songs</h3>
+      <button class="closeModalBtn" matButton mat-dialog-close>
+        <mat-icon> close</mat-icon>
+      </button>
+    </div>
+
+    <form (submit)="getEventInfo()" [formGroup]="EventForm">
+      <label for="">Event Name </label>
+      <input formControlName="EventTitle" type="text" name="" id="" />
+
+      <label for="">Event Location</label>
+      <input formControlName="EventLocation" type="text" name="" id="" />
+
+      <label for="">Event Date </label>
+      <input formControlName="EventDate" type="date" name="" id="" />
+
+      <label for="">Event Time</label>
+
+      <input formControlName="EventTime" type="time" name="" id="" />
+      <button matButton [mat-dialog-close]="true" type="submit">Add</button>
+    </form>
+  </mat-dialog-content>
+</section>

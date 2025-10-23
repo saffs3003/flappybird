@@ -1,0 +1,62 @@
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+    "email": "billie22@gmail.com", 
+    "name":"Billie",
+    "password": "123",
+    "role": "Artist"
+    
+}
+
+###
+GET http://localhost:3000/api/admin-data
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ4NDA2NDA2LCJleHAiOjE3NDg0MTAwMDZ9.oe5maNs1jmkRALngVdI6qnPLp-Hh1dOve7C8dqIU9ic
+###
+POST http://localhost:3000/api/login
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDkyODQwMjAsImV4cCI6MTc0OTI4NzYyMH0.AYfxcxzExbbWJCcfoXMX3BLBYt4_zlL9NDK2O6eusCc
+
+{
+  "email": "saffi2@gmail.com",
+  "password": "123"
+}
+
+
+###
+GET http://localhost:3000/api/users
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ4NDA2NDA2LCJleHAiOjE3NDg0MTAwMDZ9.oe5maNs1jmkRALngVdI6qnPLp-Hh1dOve7C8dqIU9ic
+###
+
+POST http://localhost:3000/api/add-songs
+Content-Type: application/json
+Authorization: :Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6IkFydGlzdCIsImlhdCI6MTc0OTI4NTk2MywiZXhwIjoxNzQ5Mjg5NTYzfQ.xG13xWalXpZmz9pYLBjTmdoKIEgR4ZYTURkgjCqeiA4
+
+{
+  "title":"Birds of a Feather",
+  "genre":"" ,
+  "cover_art":"" ,
+  "audio_path":"" ,
+  "artist_id": "2",
+  "is_approved":true
+ 
+}
+
+###
+GET http://localhost:3000/api/unapproved-songs
+
+
+###
+POST http://localhost:3000/api/add-events
+Content-Type: application/json
+
+{
+    "title": "billie22@gmail.com", 
+    "date":"Billie",
+    "time": "123",
+    "location": "Artist",
+    "artistId":2
+}
+
+###
+GET http://localhost:3000/api/unapproved-events
